@@ -21,11 +21,19 @@ class Promo(Set):
         self.addCard(Card('Walled Village', 'kingdom', 'Promotional', 4))
 
         #Events
-        self.events.append(Card('Summon', 'event', 'Promotional', 5))
+        self.addEvent(Card('Summon', 'event', 'Promotional', 5))
 
     def addCard(self, card):
         if card.name in self.promoCards:
             self.kingdomCards.append(card)
+
+    def addEvent(self, event):
+        if event.name in self.promoCards:
+            self.eventCards.append(card)
+
+    def addLandmark(self, landmark):
+        if landmark.name in self.promoCards:
+            self.landmarkCards.append(card)
 
     def getExtraSupplyCards(self, kingdomCards, eventCards, landmarkCards):
         extraSupplyCards = []
