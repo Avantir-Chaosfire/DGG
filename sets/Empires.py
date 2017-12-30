@@ -1,3 +1,5 @@
+from random import *
+
 from Card import *
 from Set import *
 
@@ -85,12 +87,15 @@ class Empires(Set):
         usingVictoryTokens = False
         usingDebtTokens = False
         
-        for card in kingdomCards + eventCards:
+        for card in kingdomCards + eventCards + landmarkCards:
             if not usingVictoryTokens and card.name in ['Triumph', 'Chariot Race', 'Farmers\' Market', 'Castles', 'Ritual', 'Sacrifice', 'Salt the Earth', 'Temple', 'Wedding', 'Patrician/Emporium', 'Groundskeeper', 'Plunder', 'Wild Hunt', 'Conquest', 'Dominate', 'Aqueduct', 'Arena', 'Basilica', 'Baths', 'Battlefield', 'Colonnade', 'Defiled Shrine', 'Labyrinth', 'Mountain Pass', 'Tomb']:
                 extraSupplyCards.append(Card('Victory Tokens', 'tokens', 'Empires'))
                 usingVictoryTokens = True
             if not usingDebtTokens and card.name in ['Engineer', 'Triumph', 'Annex', 'City Quarter', 'Donate', 'Overlord', 'Royal Blacksmith', 'Wedding', 'Gladiator/Fortune', 'Mountain Pass']:
                 extraSupplyCards.append(Card('Debt Tokens', 'tokens', 'Empires'))
                 usingDebtTokens = True
+            if card.name == 'Obelisk':
+                chosenCard = kingdomCards[randint(0, 9)]
+                extraSupplyCards.append(Card('Chosen Pile: ' + chosenCard.name, 'setup', chosenCard.setName))
 
         return extraSupplyCards
