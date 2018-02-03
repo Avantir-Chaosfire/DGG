@@ -46,4 +46,4 @@ class Intrigue(Set):
             self.kingdomCards.append(Card('Patrol', 'kingdom', 'Intrigue (2ed)', 5))
             
             self.kingdomCards.append(Card('Replace', 'kingdom', 'Intrigue (2ed)', 5))
-            self.kingdomCards.append(Card('Secret Pasage', 'kingdom', 'Intrigue (2ed)', 4))
+            self.kingdomCards.append(Card('Secret Passage', 'kingdom', 'Intrigue (2ed)', 4))
