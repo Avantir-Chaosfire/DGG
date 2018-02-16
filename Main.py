@@ -82,27 +82,44 @@ def main():
 
     while True:
         setsToUse = []
+        usingSets = []
 
         print('Enter expansion names you want to use')
 
         while True:
-            setToUse = input().lower()
+            command = input().lower()
+
+            args = command.split(' ')
+            weight = 1
+
+            try:
+                weight = int(args[-1])
+                args = args[:-1]
+            except:
+                pass
+
+            command = ' '.join(args)
             
-            if setToUse == 'done':
+            if command == 'done':
                 break
-            elif setToUse in deck.keys():
-                setsToUse.append(setToUse)
+            elif command in deck.keys():
+                if command in usingSets:
+                    print('Duplicate expansion')
+                else:
+                    setsToUse.append((command, weight))
+                    usingSets.append(command)
             else:
                 print('Unknown expansion')
 
         randomizerDeck = []
         possibleKingdomCards = []
 
-        for cardSet in setsToUse:
+        for (cardSet, weight) in setsToUse:
             possibleKingdomCards += deck[cardSet].getKingdomCards()
-            randomizerDeck += deck[cardSet].getKingdomCards()
-            randomizerDeck += deck[cardSet].getEvents()
-            randomizerDeck += deck[cardSet].getLandmarks()
+            for i in range(0, weight):
+                randomizerDeck += deck[cardSet].getKingdomCards()
+                randomizerDeck += deck[cardSet].getEvents()
+                randomizerDeck += deck[cardSet].getLandmarks()
 
         if len(possibleKingdomCards) < 10:
             print('Not enough kingdom cards to play with')
@@ -164,7 +181,7 @@ def main():
                         recommendedLandmarks += 1
                     hasLandmarks = True
 
-        for cardSet in setsToUse:
+        for (cardSet, weight) in setsToUse:
             extraSupplyCards += deck[cardSet].getExtraSupplyCards(kingdomCards, eventCards, landmarkCards)
 
         resolvedExtraSupplyCards = []
