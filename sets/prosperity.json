@@ -32,8 +32,8 @@
 		},
 		"extraSupplyPiles":
 		{
-			"Platinum": {"cost": 9, "random": true},
-			"Colony": {"cost": 11, "random": true}
+			"Platinum": {"cost": 9, "random": true, "requires": ["Colony"]},
+			"Colony": {"cost": 11, "random": true, "requires": ["Platinum"]}
 		},
 		"extraMaterials":
 		{

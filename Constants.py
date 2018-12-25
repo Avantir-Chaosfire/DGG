@@ -1,0 +1,71 @@
+class Constants:
+    SETS_DIRECTORY_NAME = 'sets'
+    CONFIG_FILE_EXTENSION = '.json'
+
+    SET_NAME_ATTRIBUTE = 'name'
+    COMMON_ATTRIBUTE = 'common'
+    EDITIONS_ATTRIBUTE = 'editions'
+
+    COMBINED_SECONDARY_COST_ATTRIBUTE = 'combined'
+    
+    COST_ATTRIBUTE = 'cost'
+    POTIONS_ATTRIBUTE = 'potions'
+    DEBT_ATTRIBUTE = 'debt'
+    REQUIRES_ATTRIBUTE = 'requires'
+    RANDOM_ATTRIBUTE = 'random'
+    AVAILABLE_ATTRIBUTE = 'available'
+    SELECT_ATTRIBUTE = 'select'
+    WEIGHT_ATTRIBUTE = 'weight'
+
+    COST_DEFAULT_VALUE = None
+    POTIONS_DEFAULT_VALUE = 0
+    DEBT_DEFAULT_VALUE = 0
+    RANDOM_DEFAULT_VALUE = False
+    AVAILABLE_DEFAULT_VALUE = True
+    SELECT_DEFAULT_VALUE = False
+    WEIGHT_DEFAULT_VALUE = None
+
+    KINGDOM_PILES_ATTRIBUTE = 'kingdomPiles'
+    EVENTS_ATTRIBUTE = 'events'
+    LANDMARKS_ATTRIBUTE = 'landmarks'
+    PROJECTS_ATTRIBUTE = 'projects'
+    STARTING_DECK_ATTRIBUTE = 'startingDeck'
+    EXTRA_SUPPLY_PILES_ATTRIBUTE = 'extraSupplyPiles'
+    NON_SUPPLY_PILES_ATTRIBUTE = 'nonSupplyPiles'
+    TRASH_ATTRIBUTE = 'trash'
+    EXTRA_MATERIALS_ATTRIBUTE = 'extraMaterials'
+
+    #In order they will be displayed
+    PIECE_TYPES = [
+        KINGDOM_PILES_ATTRIBUTE,
+        EVENTS_ATTRIBUTE,
+        LANDMARKS_ATTRIBUTE,
+        PROJECTS_ATTRIBUTE,
+        STARTING_DECK_ATTRIBUTE,
+        EXTRA_SUPPLY_PILES_ATTRIBUTE,
+        NON_SUPPLY_PILES_ATTRIBUTE,
+        TRASH_ATTRIBUTE,
+        EXTRA_MATERIALS_ATTRIBUTE
+    ]
+
+    PIECE_TYPE_DISPLAY_NAMES = {
+        KINGDOM_PILES_ATTRIBUTE: 'Kingdom Cards',
+        STARTING_DECK_ATTRIBUTE: 'Starting Deck',
+        TRASH_ATTRIBUTE: 'Trash',
+        EVENTS_ATTRIBUTE: 'Events',
+        LANDMARKS_ATTRIBUTE: 'Landmarks',
+        PROJECTS_ATTRIBUTE: 'Projects',
+        EXTRA_SUPPLY_PILES_ATTRIBUTE: 'Supply',
+        NON_SUPPLY_PILES_ATTRIBUTE: 'Non-Supply',
+        EXTRA_MATERIALS_ATTRIBUTE: 'Materials'
+    }
+
+    ALL_EDITIONS = 0
+
+    KINGDOM_CARD_PILES = 10
+
+    MULTIPLE_SET_NAME_SEPARATOR = '/'
+
+    DONE_COMMAND = 'done'
+
+    EDITION_COUNT_NAMES = ['first', 'second']

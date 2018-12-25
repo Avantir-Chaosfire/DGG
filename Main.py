@@ -1,27 +1,25 @@
 import random, os
 
+from Constants import *
 from CardSet import *
 from Game import *
 
 #TODO
 #gui?
 #executable
-#variablize magic numbers and strings
-
-editionCountNames = ['first', 'second']
 
 def main():
-    rawCardSetsList = [CardSet(fileName) for fileName in os.listdir('sets') if not fileName.startswith('.') and os.path.isfile(os.path.join('sets', fileName))]
+    rawCardSetsList = [CardSet(fileName) for fileName in os.listdir(Constants.SETS_DIRECTORY_NAME) if not fileName.startswith('.') and os.path.isfile(os.path.join(Constants.SETS_DIRECTORY_NAME, fileName))]
 
     cardSetEditionNames = {}
     cardSets = {}
     for cardSet in rawCardSetsList:
         cardSetNameInput = cardSet.name.lower()
         cardSets[cardSetNameInput] = cardSet
-        cardSetEditionNames[cardSetNameInput] = (cardSetNameInput, cardSet.editionCount if cardSet.editionCount > 0 else 0)
-        cardSetEditionNames[cardSetNameInput + ' all editions'] = (cardSetNameInput, 0)
+        cardSetEditionNames[cardSetNameInput] = (cardSetNameInput, cardSet.editionCount if cardSet.editionCount > 0 else Constants.ALL_EDITIONS)
+        cardSetEditionNames[cardSetNameInput + ' all editions'] = (cardSetNameInput, Constants.ALL_EDITIONS)
         for editionIndex in range(cardSet.editionCount):
-            cardSetEditionNames[cardSetNameInput + ' ' + editionCountNames[editionIndex] + ' edition'] = (cardSetNameInput, editionIndex + 1)
+            cardSetEditionNames[cardSetNameInput + ' ' + Constants.EDITION_COUNT_NAMES[editionIndex] + ' edition'] = (cardSetNameInput, editionIndex + 1)
 
     print('Dominion Game Generator')
     print('')
@@ -45,7 +43,7 @@ def main():
 
             command = ' '.join(args)
             
-            if command == 'done':
+            if command == Constants.DONE_COMMAND:
                 break
             elif command in cardSetEditionNames:
                 if command in setsToUse:
@@ -62,25 +60,23 @@ def main():
         kingdomPileCount = 0
 
         for (cardSetName, (edition, weight)) in setsToUse.items():
-            pieces = cardSets[cardSetName].getPieces('kingdomPiles', edition)
+            pieces = cardSets[cardSetName].getPieces(Constants.KINGDOM_PILES_ATTRIBUTE, edition)
             kingdomPileCount += len(pieces)
-            for pieceType in ['events', 'landmarks', 'projects']:
+            for pieceType in [Constants.EVENTS_ATTRIBUTE, Constants.LANDMARKS_ATTRIBUTE, Constants.PROJECTS_ATTRIBUTE]:
                 pieces += cardSets[cardSetName].getPieces(pieceType, edition)
             for piece in pieces:
                 piece.weight = weight if piece.weight == None else piece.weight
                 for i in range(weight):
                     randomizerDeck.append((piece, i))
 
-        if kingdomPileCount < 10:
+        if kingdomPileCount < Constants.KINGDOM_CARD_PILES:
             print('Not enough kingdom cards to play with')
             print('')
             continue
 
         game = Game(cardSets)
 
-        recommendedCount = 0
-
-        while len(game.pieces['kingdomPiles']) < 10:
+        while len(game.pieces[Constants.KINGDOM_PILES_ATTRIBUTE]) < Constants.KINGDOM_CARD_PILES:
             chosenPieceIndex = random.randint(0, len(randomizerDeck) - 1)
 
             (chosenPiece, weightIndex) = randomizerDeck[chosenPieceIndex]

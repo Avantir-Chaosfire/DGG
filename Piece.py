@@ -1,3 +1,5 @@
+from Constants import *
+
 class Piece:
     def __init__(self, name, setName, edition, kind, properties):
         self.name = name
@@ -5,14 +7,14 @@ class Piece:
         self.edition = edition
         self.kind = kind
         
-        self.cost = properties.get('cost', None)
-        self.potions = properties.get('potions', 0)
-        self.debt = properties.get('debt', 0)
-        self.requires = properties.get('requires', [])
-        self.random = properties.get('random', False)
-        self.available = properties.get('available', True)
-        self.select = properties.get('select', False)
-        self.weight = properties.get('weight', None)
+        self.cost = properties.get(Constants.COST_ATTRIBUTE, Constants.COST_DEFAULT_VALUE)
+        self.potions = properties.get(Constants.POTIONS_ATTRIBUTE, Constants.POTIONS_DEFAULT_VALUE)
+        self.debt = properties.get(Constants.DEBT_ATTRIBUTE, Constants.DEBT_DEFAULT_VALUE)
+        self.requires = properties.get(Constants.REQUIRES_ATTRIBUTE, [])
+        self.random = properties.get(Constants.RANDOM_ATTRIBUTE, Constants.RANDOM_DEFAULT_VALUE)
+        self.available = properties.get(Constants.AVAILABLE_ATTRIBUTE, Constants.AVAILABLE_DEFAULT_VALUE)
+        self.select = properties.get(Constants.SELECT_ATTRIBUTE, Constants.SELECT_DEFAULT_VALUE)
+        self.weight = properties.get(Constants.WEIGHT_ATTRIBUTE, Constants.WEIGHT_DEFAULT_VALUE)
 
         self.recommended = False
         self.selectedBy = []
@@ -27,25 +29,25 @@ class Piece:
         lengths = formatProperties.lengths[self.kind]
         
         output = '\t'
-        if lengths['cost'] > 0:
+        if lengths[Constants.COST_ATTRIBUTE] > 0:
             output += str(self.cost)
             targetSize = 0
             costString = ''
-            if lengths['potions'] > 0 and lengths['debt'] > 0:
-                targetSize = lengths['combined'] + 5
+            if lengths[Constants.POTIONS_ATTRIBUTE] > 0 and lengths[Constants.DEBT_ATTRIBUTE] > 0:
+                targetSize = lengths[Constants.COMBINED_SECONDARY_COST_ATTRIBUTE] + 5
                 if self.potions > 0 and self.debt > 0:
                     costString = '(' + str(self.potions) + 'p,' + str(self.debt) + 'd)'
                 elif self.potions > 0:
                     costString = '(' + str(self.potions) + 'p)'
                 elif self.debt > 0:
                     costString = '(' + str(self.debt) + 'd)'
-            elif lengths['potions'] > 0:
-                targetSize = lengths['potions'] + 3
+            elif lengths[Constants.POTIONS_ATTRIBUTE] > 0:
+                targetSize = lengths[Constants.POTIONS_ATTRIBUTE] + 3
                 costString = '(' + str(self.potions) + 'p)' if self.potions > 0 else ''
-            elif lengths['debt'] > 0:
-                targetSize = lengths['debt'] + 3
+            elif lengths[Constants.DEBT_ATTRIBUTE] > 0:
+                targetSize = lengths[Constants.DEBT_ATTRIBUTE] + 3
                 costString = '(' + str(self.debt) + 'd)' if self.debt > 0 else ''
-            if lengths['potions'] > 0 or lengths['debt'] > 0:
+            if lengths[Constants.POTIONS_ATTRIBUTE] > 0 or lengths[Constants.DEBT_ATTRIBUTE] > 0:
                 output += costString + ''.join([' ' for i in range(targetSize - len(costString))])
             output += ' - '
         output += self.name + ' (' + self.setName + ('' if self.edition == 0 else ' ' + ordinal(self.edition) + ' Edition') + ')'

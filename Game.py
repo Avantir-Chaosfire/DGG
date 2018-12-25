@@ -1,23 +1,12 @@
 import random
 
+from Constants import *
 from FormatProperties import *
 
 class Game:
-    PIECE_TYPE_DISPLAY_NAMES = {
-        'kingdomPiles': 'Kingdom Cards',
-        'startingDeck': 'Starting Deck',
-        'trash': 'Trash',
-        'events': 'Events',
-        'landmarks': 'Landmarks',
-        'projects': 'Projects',
-        'extraSupplyPiles': 'Supply',
-        'nonSupplyPiles': 'Non-Supply',
-        'extraMaterials': 'Materials'
-    }
-    
     def __init__(self, cardSets):
         self.pieces = {}
-        self.pieces['kingdomPiles'] = []
+        self.pieces[Constants.KINGDOM_PILES_ATTRIBUTE] = []
         self.formatProperties = FormatProperties()
         self.cardSets = cardSets
 
@@ -31,7 +20,7 @@ class Game:
                 self.pieces[piece.kind] = []
             self.pieces[piece.kind].append(piece)
 
-            if piece.kind in ['events', 'landmarks', 'projects'] and self.recommendedCount < 2:
+            if piece.kind in [Constants.EVENTS_ATTRIBUTE, Constants.LANDMARKS_ATTRIBUTE, Constants.PROJECTS_ATTRIBUTE] and self.recommendedCount < 2:
                 piece.recommended = True
                 self.recommendedCount += 1
 
@@ -56,7 +45,7 @@ class Game:
             cardSetKeyName = cardSet.name.lower()
             if cardSetKeyName in setsToUse:
                 (edition, _) = setsToUse[cardSetKeyName]
-                kingdomPilesFromCardSetCount = len([piece for piece in self.pieces['kingdomPiles'] if piece.setName == cardSet.name])
+                kingdomPilesFromCardSetCount = len([piece for piece in self.pieces[Constants.KINGDOM_PILES_ATTRIBUTE] if piece.setName == cardSet.name])
                 if kingdomPilesFromCardSetCount > 0:
                     for pieceType in self.pieces.keys():
                         piecesToAdd += cardSet.getRandomPieces(pieceType, kingdomPilesFromCardSetCount, edition)
@@ -68,7 +57,7 @@ class Game:
             uniquePieces = {}
             for piece in self.pieces[pieceType]:
                 if piece.name in uniquePieces:
-                    uniquePieces[piece.name].setName += '/' + piece.setName
+                    uniquePieces[piece.name].setName += Constants.MULTIPLE_SET_NAME_SEPARATOR + piece.setName
                 else:
                     uniquePieces[piece.name] = piece
             self.pieces[pieceType] = uniquePieces.values()
@@ -77,13 +66,13 @@ class Game:
         for pieceType in self.pieces.keys():
             for piece in self.pieces[pieceType]:
                 if piece.select:
-                    list(self.pieces['kingdomPiles'])[random.randint(0, 9)].selectedBy.append(piece.name)
+                    list(self.pieces[Constants.KINGDOM_PILES_ATTRIBUTE])[random.randint(0, Constants.KINGDOM_CARD_PILES - 1)].selectedBy.append(piece.name)
 
     def print(self):
-        for pieceType in ['kingdomPiles', 'events', 'landmarks', 'projects', 'startingDeck', 'extraSupplyPiles', 'nonSupplyPiles', 'trash', 'extraMaterials']:
+        for pieceType in Constants.PIECE_TYPES:
             if len(self.pieces.get(pieceType, [])) > 0:
                 print('')
-                print(Game.PIECE_TYPE_DISPLAY_NAMES[pieceType])
+                print(Constants.PIECE_TYPE_DISPLAY_NAMES[pieceType])
                 
                 for piece in sorted(self.pieces[pieceType], key = lambda p: (p.cost, p.potions, p.debt)):
                     piece.print(self.formatProperties)

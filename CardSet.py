@@ -1,35 +1,24 @@
 import os, json, random
 
+from Constants import *
 from Piece import *
 
 class CardSet:
-    PIECE_TYPES = [
-        'kingdomPiles',
-        'startingDeck',
-        'trash',
-        'events',
-        'landmarks',
-        'projects',
-        'extraSupplyPiles',
-        'nonSupplyPiles',
-        'extraMaterials'
-    ]
-    
     def __init__(self, fileName):
         self.pieces = {}
 
-        with open(os.path.join('sets', fileName)) as jsonFile:
+        with open(os.path.join(Constants.SETS_DIRECTORY_NAME, fileName)) as jsonFile:
             data = json.load(jsonFile)
 
-        self.name = data.get('name', fileName[:-len('.json')])
-        self.addPieces(data.get('common', {}), 0)
+        self.name = data.get(Constants.SET_NAME_ATTRIBUTE, fileName[:-len(Constants.CONFIG_FILE_EXTENSION)])
+        self.addPieces(data.get(Constants.COMMON_ATTRIBUTE, {}), Constants.ALL_EDITIONS)
 
-        self.editionCount = len(data.get('editions', []))
+        self.editionCount = len(data.get(Constants.EDITIONS_ATTRIBUTE, []))
         for editionIndex in range(self.editionCount):
-            self.addPieces(data['editions'][editionIndex], editionIndex + 1)
+            self.addPieces(data[Constants.EDITIONS_ATTRIBUTE][editionIndex], editionIndex + 1)
 
     def addPieces(self, data, edition):
-        for pieceType in CardSet.PIECE_TYPES:
+        for pieceType in Constants.PIECE_TYPES:
             for (name, properties) in data.get(pieceType, {}).items():
                 if not pieceType in self.pieces:
                     self.pieces[pieceType] = []
@@ -39,7 +28,7 @@ class CardSet:
         pieces = []
 
         for piece in self.pieces.get(pieceType, []):
-            if piece.available and (piece.edition in [0, edition] or edition == 0):
+            if piece.available and (piece.edition in [Constants.ALL_EDITIONS, edition] or edition == Constants.ALL_EDITIONS):
                 pieces.append(piece)
         return pieces
 
@@ -54,6 +43,6 @@ class CardSet:
         result = []
         for pieceType in self.pieces.keys():
             for piece in self.pieces[pieceType]:
-                if piece.random and random.randint(0, 9) < kingdomPilesFromCardSetCount:
+                if piece.random and random.randint(0, Constants.KINGDOM_CARD_PILES - 1) < kingdomPilesFromCardSetCount:
                     result.append(piece)
         return result
