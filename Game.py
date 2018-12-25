@@ -57,7 +57,7 @@ class Game:
             uniquePieces = {}
             for piece in self.pieces[pieceType]:
                 if piece.name in uniquePieces:
-                    uniquePieces[piece.name].setName += Constants.MULTIPLE_SET_NAME_SEPARATOR + piece.setName
+                    uniquePieces[piece.name].setDisplayName += Constants.MULTIPLE_SET_NAME_SEPARATOR + piece.setDisplayName
                 else:
                     uniquePieces[piece.name] = piece
             self.pieces[pieceType] = uniquePieces.values()

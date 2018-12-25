@@ -1,11 +1,20 @@
 from Constants import *
 
+#This disaster is how you turn integers into things like '1st', '2nd', '3rd' etc. while
+#enabling it to work for any integer and not requiring people who use this code to install
+#any libraries. This was developed for a stackexchange codegolf question by Gareth:
+#https://codegolf.stackexchange.com/a/4712
+def ordinal(n):
+    return "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
+
 class Piece:
     def __init__(self, name, setName, edition, kind, properties):
         self.name = name
         self.setName = setName
         self.edition = edition
         self.kind = kind
+
+        self.setDisplayName = self.setName + ('' if self.edition == 0 else ' ' + ordinal(self.edition) + ' Edition')
         
         self.cost = properties.get(Constants.COST_ATTRIBUTE, Constants.COST_DEFAULT_VALUE)
         self.potions = properties.get(Constants.POTIONS_ATTRIBUTE, Constants.POTIONS_DEFAULT_VALUE)
@@ -20,12 +29,6 @@ class Piece:
         self.selectedBy = []
 
     def print(self, formatProperties):
-        #This disaster is how you turn integers into things like '1st', '2nd', '3rd' etc. while
-        #enabling it to work for any integer and not requiring people who use this code to install
-        #any libraries. This was developed for a stackexchange codegolf question by Gareth:
-        #https://codegolf.stackexchange.com/a/4712
-        ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
-        
         lengths = formatProperties.lengths[self.kind]
         
         output = '\t'
@@ -50,7 +53,7 @@ class Piece:
             if lengths[Constants.POTIONS_ATTRIBUTE] > 0 or lengths[Constants.DEBT_ATTRIBUTE] > 0:
                 output += costString + ''.join([' ' for i in range(targetSize - len(costString))])
             output += ' - '
-        output += self.name + ' (' + self.setName + ('' if self.edition == 0 else ' ' + ordinal(self.edition) + ' Edition') + ')'
+        output += self.name + ' (' + self.setDisplayName + ')'
         
         if len(self.selectedBy) > 0:
             output += ' [Selected by: ' + self.selectedBy[0]
@@ -63,5 +66,6 @@ class Piece:
             
         print(output)
 
+        self.setDisplayName = self.setName + ('' if self.edition == 0 else ' ' + ordinal(self.edition) + ' Edition')
         self.recommended = False
         self.selectedBy = []

@@ -41,8 +41,9 @@ class CardSet:
 
     def getRandomPieces(self, pieceType, kingdomPilesFromCardSetCount, edition):
         result = []
-        for pieceType in self.pieces.keys():
-            for piece in self.pieces[pieceType]:
-                if piece.random and random.randint(0, Constants.KINGDOM_CARD_PILES - 1) < kingdomPilesFromCardSetCount:
-                    result.append(piece)
+        if random.randint(0, Constants.KINGDOM_CARD_PILES - 1) < kingdomPilesFromCardSetCount:
+            for pieceType in self.pieces.keys():
+                for piece in self.pieces[pieceType]:
+                    if piece.random:
+                        result.append(piece)
         return result
