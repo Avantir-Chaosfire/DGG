@@ -1,0 +1,68 @@
+{
+	"name": "Renaissance",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Border Guard": {"cost": 2, "requires": ["Lantern", "Horn"]},
+			"Ducat": {"cost": 2, "requires": ["Coffer Mats"]},
+			"Lackeys": {"cost": 2, "requires": ["Villager Mats"]},
+			"Acting Troupe": {"cost": 3, "requires": ["Villager Mats"]},
+			"Cargo Ship": {"cost": 3},
+			"Experiment": {"cost": 3},
+			"Improve": {"cost": 3},
+			"Flag Bearer": {"cost": 4, "requires": ["Flag"]},
+			"Hideout": {"cost": 4},
+			"Inventor": {"cost": 4},
+			"Mountain Village": {"cost": 4},
+			"Patron": {"cost": 4, "requires": ["Coffer Mats"]},
+			"Priest": {"cost": 4},
+			"Research": {"cost": 4},
+			"Silk Merchant": {"cost": 4, "requires": ["Coffer Mats", "Villager Mats"]},
+			"Old Witch": {"cost": 5},
+			"Recruiter": {"cost": 5, "requires": ["Villager Mats"]},
+			"Scepter": {"cost": 5},
+			"Scholar": {"cost": 5},
+			"Sculptor": {"cost": 5, "requires": ["Villager Mats"]},
+			"Seer": {"cost": 5},
+			"Spices": {"cost": 5, "requires": ["Coffer Mats"]},
+			"Swashbuckler": {"cost": 5, "requires": ["Coffer Mats", "Treasure Chest"]},
+			"Treasurer": {"cost": 5, "requires": ["Key"]},
+			"Villain": {"cost": 5}
+		},
+		"projects":
+		{
+			"Cathedral": {"cost": 3},
+			"City Gate": {"cost": 3},
+			"Pageant": {"cost": 3, "requires": ["Coffer Mats"]},
+			"Sewers": {"cost": 3},
+			"Star Chart": {"cost": 3},
+			"Exploration": {"cost": 4, "requires": ["Coffer Mats", "Villager Mats"]},
+			"Fair": {"cost": 4},
+			"Silos": {"cost": 4},
+			"Sinister Plot": {"cost": 4, "requires": ["Coin Tokens"]},
+			"Academy": {"cost": 5, "requires": ["Villager Mats"]},
+			"Capitalism": {"cost": 5},
+			"Fleet": {"cost": 5},
+			"Guildhall": {"cost": 5, "requires": ["Coffer Mats"]},
+			"Piazza": {"cost": 5},
+			"Road Network": {"cost": 5},
+			"Barracks": {"cost": 6},
+			"Crop Rotation": {"cost": 6},
+			"Innovation": {"cost": 6},
+			"Canal": {"cost": 7},
+			"Citadel": {"cost": 8}
+		},
+		"extraMaterials":
+		{
+			"Coin Tokens": {},
+			"Coffer Mats": {"requires": ["Coin Tokens"]},
+			"Villager Mats": {"requires": ["Coin Tokens"]},
+			"Lantern": {"requires": ["Border Guard"]},
+			"Horn": {"requires": ["Border Guard"]},
+			"Flag": {},
+			"Treasure Chest": {},
+			"Key": {}
+		}
+	}
+}

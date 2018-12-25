@@ -1,0 +1,26 @@
+{
+	"name": "Guilds",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Advisor": {"cost": 4},
+			"Baker": {"cost": 5, "requires": ["Coin Tokens"]},
+			"Butcher": {"cost": 5, "requires": ["Coin Tokens"]},
+			"Candlestick Maker": {"cost": 2, "requires": ["Coin Tokens"]},
+			"Doctor": {"cost": 3},
+			"Herald": {"cost": 4},
+			"Journeyman": {"cost": 5},
+			"Masterpiece": {"cost": 3},
+			"Merchant Guild": {"cost": 5, "requires": ["Coin Tokens"]},
+			"Plaza": {"cost": 4, "requires": ["Coin Tokens"]},
+			"Soothsayer": {"cost": 5},
+			"Stonemason": {"cost": 2},
+			"Taxman": {"cost": 4}
+		},
+		"extraMaterials":
+		{
+			"Coin Tokens": {}
+		}
+	}
+}

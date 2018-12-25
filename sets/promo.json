@@ -1,0 +1,25 @@
+{
+	"name": "Promotional",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Black Market": {"cost": 3, "requires": ["Black Market Deck"], "available": false},
+			"Dismantle": {"cost": 4, "available": false},
+			"Envoy": {"cost": 4, "available": false},
+			"Governor": {"cost": 5, "available": false},
+			"Prince": {"cost": 8, "available": false},
+			"Sauna/Avanto": {"cost": 4, "available": false},
+			"Stash": {"cost": 5, "available": false},
+			"Walled Village": {"cost": 4, "available": false}
+		},
+		"events":
+		{
+			"Summon": {"cost": 5, "available": false}
+		},
+		"nonSupplyPiles":
+		{
+			"Black Market Deck": {}
+		}
+	}
+}

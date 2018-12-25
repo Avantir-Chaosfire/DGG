@@ -1,0 +1,26 @@
+{
+	"name": "Cornucopia",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Fairgrounds": {"cost": 6},
+			"Farming Village": {"cost": 4},
+			"Fortune Teller": {"cost": 3},
+			"Hamlet": {"cost": 2},
+			"Harvest": {"cost": 5},
+			"Horn of Plenty": {"cost": 5},
+			"Horse Traders": {"cost": 4},
+			"Hunting Party": {"cost": 5},
+			"Jester": {"cost": 5},
+			"Menagerie": {"cost": 3},
+			"Remake": {"cost": 4},
+			"Tournament": {"cost": 4, "requires": ["Prizes"]},
+			"Young Witch": {"cost": 4}
+		},
+		"nonSupplyPiles":
+		{
+			"Prizes": {"cost": 0}
+		}
+	}
+}

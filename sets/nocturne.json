@@ -1,0 +1,72 @@
+{
+	"name": "Nocturne",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Bard": {"cost": 4, "requires": ["Boons"]},
+			"Blessed Village": {"cost": 4, "requires": ["Boons"]},
+			"Cemetery": {"cost": 4, "requires": ["Haunted Mirror"]},
+			"Changeling": {"cost": 3},
+			"Cobbler": {"cost": 5},
+			"Conclave": {"cost": 4},
+			"Crypt": {"cost": 5},
+			"Cursed Village": {"cost": 5, "requires": ["Hexes"]},
+			"Den of Sin": {"cost": 5},
+			"Devil's Workshop": {"cost": 4, "requires": ["Imp"]},
+			"Druid": {"cost": 2, "requires": ["Boons"]},
+			"Exorcist": {"cost": 4, "requires": ["Will-o'-Wisp", "Imp", "Ghost"]},
+			"Faithful Hound": {"cost": 2},
+			"Fool": {"cost": 3, "requires": ["Lucky Coin", "Lost in the Woods", "Boons"]},
+			"Ghost Town": {"cost": 3},
+			"Guardian": {"cost": 2},
+			"Idol": {"cost": 5, "requires": ["Boons"]},
+			"Leprechaun": {"cost": 3, "requires": ["Wish", "Hexes"]},
+			"Monastery": {"cost": 2},
+			"Necromancer": {"cost": 4, "requires": ["Zombies"]},
+			"Night Watchman": {"cost": 3},
+			"Pixie": {"cost": 2, "requires": ["Goat", "Boons"]},
+			"Pooka": {"cost": 5, "requires": ["Cursed Gold"]},
+			"Raider": {"cost": 6},
+			"Sacred Grove": {"cost": 5, "requires": ["Boons"]},
+			"Secret Cave": {"cost": 3, "requires": ["Magic Lamp"]},
+			"Shepherd": {"cost": 4, "requires": ["Pasture"]},
+			"Skulk": {"cost": 4, "requires": ["Hexes"]},
+			"Tormentor": {"cost": 5, "requires": ["Imp", "Hexes"]},
+			"Tracker": {"cost": 2, "requires": ["Pouch", "Boons"]},
+			"Tragic Hero": {"cost": 5},
+			"Vampire": {"cost": 5, "requires": ["Bat", "Hexes"]},
+			"Werewolf": {"cost": 5, "requires": ["Hexes"]}
+		},
+		"nonSupplyPiles":
+		{
+			"Will-o'-Wisp": {"cost": 0},
+			"Imp": {"cost": 2},
+			"Ghost": {"cost": 4},
+			"Wish": {"cost": 0},
+			"Bat": {"cost": 2, "requires": ["Vampire"]}
+		},
+		"startingDeck":
+		{
+			"Goat": {"cost": 2},
+			"Pouch": {"cost": 2},
+			"Lucky Coin": {"cost": 4},
+			"Magic Lamp": {"cost": 0, "requires": ["Wish"]},
+			"Haunted Mirror": {"cost": 0, "requires": ["Ghost"]},
+			"Pasture": {"cost": 2},
+			"Cursed Gold": {"cost": 4}
+		},
+		"extraMaterials":
+		{
+			"Lost in the Woods": {"requires": ["Boons"]},
+			"Deluded/Envious": {},
+			"Miserable/Twice Miserable": {},
+			"Boons": {"requires": ["Will-o'-Wisp"]},
+			"Hexes": {"requires": ["Deluded/Envious", "Miserable/Twice Miserable"]}
+		},
+		"trash":
+		{
+			"Zombies": {"cost": 3}
+		}
+	}
+}

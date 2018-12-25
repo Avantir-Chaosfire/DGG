@@ -1,0 +1,78 @@
+{
+	"name": "Empires",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Archive": {"cost": 5},
+			"Capital": {"cost": 5},
+			"Castles": {"cost": 3, "requires": ["Victory Tokens"]},
+			"Catapult/Rocks": {"cost": 3},
+			"Chariot Race": {"cost": 3, "requires": ["Victory Tokens"]},
+			"Charm": {"cost": 5},
+			"City Quarter": {"cost": 0, "debt": 8, "requires": ["Debt Tokens"]},
+			"Crown": {"cost": 5},
+			"Encampment/Plunder": {"cost": 2, "requires": ["Victory Tokens"]},
+			"Enchantress": {"cost": 3},
+			"Engineer": {"cost": 0, "debt": 4, "requires": ["Debt Tokens"]},
+			"Farmers' Market": {"cost": 3, "requires": ["Victory Tokens"]},
+			"Forum": {"cost": 5},
+			"Gladiator/Fortune": {"cost": 3, "requires": ["Debt Tokens"]},
+			"Groundskeeper": {"cost": 5, "requires": ["Victory Tokens"]},
+			"Legionary": {"cost": 5},
+			"Overlord": {"cost": 0, "debt": 8, "requires": ["Debt Tokens"]},
+			"Patrician/Emporium": {"cost": 2, "requires": ["Victory Tokens"]},
+			"Royal Blacksmith": {"cost": 0, "debt": 8, "requires": ["Debt Tokens"]},
+			"Sacrifice": {"cost": 4, "requires": ["Victory Tokens"]},
+			"Settlers/Bustling Village": {"cost": 2},
+			"Temple": {"cost": 4, "requires": ["Victory Tokens"]},
+			"Villa": {"cost": 4},
+			"Wild Hunt": {"cost": 5, "requires": ["Victory Tokens"]}
+		},
+		"events":
+		{
+			"Advance": {"cost": 0},
+			"Annex": {"cost": 0, "debt": 8, "requires": ["Debt Tokens"]},
+			"Banquet": {"cost": 3},
+			"Conquest": {"cost": 6, "requires": ["Victory Tokens"]},
+			"Delve": {"cost": 2},
+			"Dominate": {"cost": 14, "requires": ["Victory Tokens"]},
+			"Donate": {"cost": 0, "debt": 8, "requires": ["Debt Tokens"]},
+			"Ritual": {"cost": 4, "requires": ["Victory Tokens"]},
+			"Salt the Earth": {"cost": 4, "requires": ["Victory Tokens"]},
+			"Tax": {"cost": 2},
+			"Triumph": {"cost": 0, "debt": 5, "requires": ["Debt Tokens", "Victory Tokens"]},
+			"Wedding": {"cost": 4, "debt": 3, "requires": ["Debt Tokens", "Victory Tokens"]},
+			"Windfall": {"cost": 5}
+		},
+		"landmarks":
+		{
+			"Aqueduct": {"requires": ["Victory Tokens"]},
+			"Arena": {"requires": ["Victory Tokens"]},
+			"Bandit Fort": {},
+			"Basilica": {"requires": ["Victory Tokens"]},
+			"Baths": {"requires": ["Victory Tokens"]},
+			"Battlefield": {"requires": ["Victory Tokens"]},
+			"Colonnade": {"requires": ["Victory Tokens"]},
+			"Defiled Shrine": {"requires": ["Victory Tokens"]},
+			"Fountain": {},
+			"Keep": {},
+			"Labyrinth": {"requires": ["Victory Tokens"]},
+			"Mountain Pass": {"requires": ["Debt Tokens", "Victory Tokens"]},
+			"Museum": {},
+			"Obelisk": {"select": true},
+			"Orchard": {},
+			"Palace": {},
+			"Tomb": {"requires": ["Victory Tokens"]},
+			"Tower": {},
+			"Triumphal Arch": {},
+			"Wall": {},
+			"Wolf Den": {}
+		},
+		"extraMaterials":
+		{
+			"Debt Tokens": {},
+			"Victory Tokens": {}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "Seaside",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Ambassador": {"cost": 3},
+			"Bazaar": {"cost": 5},
+			"Caravan": {"cost": 4},
+			"Cutpurse": {"cost": 4},
+			"Embargo": {"cost": 2, "requires": ["Embargo Tokens"]},
+			"Explorer": {"cost": 5},
+			"Fishing Village": {"cost": 3},
+			"Ghost Ship": {"cost": 5},
+			"Haven": {"cost": 2},
+			"Island": {"cost": 4, "requires": ["Island Mat"]},
+			"Lighthouse": {"cost": 2},
+			"Lookout": {"cost": 3},
+			"Merchant Ship": {"cost": 5},
+			"Native Village": {"cost": 2, "requires": ["Native Village Mat"]},
+			"Navigator": {"cost": 4},
+			"Outpost": {"cost": 5},
+			"Pearl Diver": {"cost": 2},
+			"Pirate Ship": {"cost": 4, "requires": ["Coin Tokens", "Pirate Ship Mat"]},
+			"Salvager": {"cost": 4},
+			"Sea Hag": {"cost": 4},
+			"Smugglers": {"cost": 3},
+			"Tactician": {"cost": 5},
+			"Treasure Map": {"cost": 4},
+			"Treasury": {"cost": 5},
+			"Warehouse": {"cost": 3},
+			"Wharf": {"cost": 5}
+		},
+		"extraMaterials":
+		{
+			"Embargo Tokens": {},
+			"Island Mat": {},
+			"Native Village Mat": {},
+			"Pirate Ship Mat": {"requires": ["Coin Tokens"]},
+			"Coin Tokens": {}
+		}
+	}
+}

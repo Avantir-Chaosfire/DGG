@@ -1,0 +1,54 @@
+{
+	"name": "Intrigue",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Baron": {"cost": 4},
+			"Bridge": {"cost": 4},
+			"Conspirator": {"cost": 4},
+			"Courtyard": {"cost": 2},
+			"Duke": {"cost": 5},
+			"Harem": {"cost": 6},
+			"Ironworks": {"cost": 4},
+			"Masquerade": {"cost": 3},
+			"Nobles": {"cost": 6},
+			"Mining Village": {"cost": 4},
+			"Minion": {"cost": 5},
+			"Pawn": {"cost": 2},
+			"Shanty Town": {"cost": 3},
+			"Steward": {"cost": 3},
+			"Swindler": {"cost": 3},
+			"Torturer": {"cost": 5},
+			"Trading Post": {"cost": 5},
+			"Upgrade": {"cost": 5},
+			"Wishing Well": {"cost": 3}
+		}
+	},
+	"editions":
+	[
+		{
+			"kingdomPiles":
+			{
+				"Coppersmith": {"cost": 4},
+				"Great Hall": {"cost": 4},
+				"Saboteur": {"cost": 5},
+				"Scout": {"cost": 4},
+				"Secret Chamber": {"cost": 2},
+				"Tribute": {"cost": 5}
+			}
+		},
+		{
+			"kingdomPiles":
+			{
+				"Courtier": {"cost": 5},
+				"Diplomat": {"cost": 4},
+				"Lurker": {"cost": 2},
+				"Mill": {"cost": 4},
+				"Patrol": {"cost": 5},
+				"Replace": {"cost": 5},
+				"Secret Passage": {"cost": 4}
+			}
+		}
+	]
+}

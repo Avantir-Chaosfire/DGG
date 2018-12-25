@@ -1,0 +1,58 @@
+{
+	"name": "Dark Ages",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Altar": {"cost": 6},
+			"Armory": {"cost": 4},
+			"Band of Misfits": {"cost": 5},
+			"Bandit Camp": {"cost": 5, "requires": ["Spoils"]},
+			"Beggar": {"cost": 2},
+			"Catacombs": {"cost": 5},
+			"Count": {"cost": 5},
+			"Counterfeit": {"cost": 5},
+			"Cultist": {"cost": 5, "requires": ["Ruins"]},
+			"Death Cart": {"cost": 4, "requires": ["Ruins"]},
+			"Feodum": {"cost": 4},
+			"Forager": {"cost": 3},
+			"Fortress": {"cost": 4},
+			"Graverobber": {"cost": 5},
+			"Hermit": {"cost": 3, "requires": ["Madman"]},
+			"Hunting Grounds": {"cost": 6},
+			"Ironmonger": {"cost": 4},
+			"Junk Dealer": {"cost": 5},
+			"Knights": {"cost": 5},
+			"Marauder": {"cost": 4, "requires": ["Spoils", "Ruins"]},
+			"Market Square": {"cost": 3},
+			"Mystic": {"cost": 5},
+			"Pillage": {"cost": 5, "requires": ["Spoils"]},
+			"Poor House": {"cost": 1},
+			"Procession": {"cost": 4},
+			"Rats": {"cost": 4},
+			"Rebuild": {"cost": 5},
+			"Rogue": {"cost": 5},
+			"Sage": {"cost": 3},
+			"Scavenger": {"cost": 4},
+			"Squire": {"cost": 2},
+			"Storeroom": {"cost": 3},
+			"Urchin": {"cost": 3, "requires": ["Mercenary"]},
+			"Vagrant": {"cost": 2},
+			"Wandering Minstrel": {"cost": 4}
+		},
+		"nonSupplyPiles":
+		{
+			"Madman": {"cost": 0},
+			"Mercenary": {"cost": 0},
+			"Spoils": {"cost": 0}
+		},
+		"extraSupplyPiles":
+		{
+			"Ruins": {"cost": 0}
+		},
+		"startingDeck":
+		{
+			"Shelters": {"cost": 1, "random": true}
+		}
+	}
+}

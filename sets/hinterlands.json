@@ -1,0 +1,35 @@
+{
+	"name": "Hinterlands",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Border Village": {"cost": 6},
+			"Cache": {"cost": 5},
+			"Cartographer": {"cost": 5},
+			"Crossroads": {"cost": 2},
+			"Develop": {"cost": 3},
+			"Duchess": {"cost": 2},
+			"Embassy": {"cost": 5},
+			"Farmland": {"cost": 6},
+			"Fool's Gold": {"cost": 2},
+			"Haggler": {"cost": 5},
+			"Highway": {"cost": 5},
+			"Ill-Gotten Gains": {"cost": 5},
+			"Inn": {"cost": 5},
+			"Jack of all Trades": {"cost": 4},
+			"Mandarin": {"cost": 5},
+			"Margrave": {"cost": 5},
+			"Noble Brigand": {"cost": 4},
+			"Nomad Camp": {"cost": 4},
+			"Oasis": {"cost": 3},
+			"Oracle": {"cost": 3},
+			"Scheme": {"cost": 3},
+			"Silk Road": {"cost": 4},
+			"Spice Merchant": {"cost": 4},
+			"Stables": {"cost": 5},
+			"Trader": {"cost": 4},
+			"Tunnel": {"cost": 3}
+		}
+	}
+}

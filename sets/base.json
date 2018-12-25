@@ -1,0 +1,54 @@
+{
+	"name": "Base",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Bureaucrat": {"cost": 4},
+			"Cellar": {"cost": 2},
+			"Chapel": {"cost": 2},
+			"Council Room": {"cost": 5},
+			"Festival": {"cost": 5},
+			"Gardens": {"cost": 4},
+			"Laboratory": {"cost": 5},
+			"Library": {"cost": 5},
+			"Market": {"cost": 5},
+			"Militia": {"cost": 4},
+			"Mine": {"cost": 5},
+			"Moat": {"cost": 2},
+			"Moneylender": {"cost": 4},
+			"Remodel": {"cost": 4},
+			"Smithy": {"cost": 4},
+			"Throne Room": {"cost": 4},
+			"Village": {"cost": 3},
+			"Witch": {"cost": 5},
+			"Workshop": {"cost": 3}
+		}
+	},
+	"editions":
+	[
+		{
+			"kingdomPiles":
+			{
+				"Adventurer": {"cost": 6},
+				"Chancellor": {"cost": 3},
+				"Feast": {"cost": 4},
+				"Spy": {"cost": 4},
+				"Thief": {"cost": 4},
+				"Woodcutter": {"cost": 3}
+			}
+		},
+		{
+			"kingdomPiles":
+			{
+				"Artisan": {"cost": 6},
+				"Bandit": {"cost": 5},
+				"Harbinger": {"cost": 3},
+				"Merchant": {"cost": 3},
+				"Poacher": {"cost": 4},
+				"Sentry": {"cost": 5},
+				"Vassal": {"cost": 3}
+			}
+		}
+	]
+}

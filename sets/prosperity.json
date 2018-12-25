@@ -1,0 +1,46 @@
+{
+	"name": "Prosperity",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Bank": {"cost": 7},
+			"Bishop": {"cost": 4, "requires": ["Victory Tokens"]},
+			"City": {"cost": 5},
+			"Contraband": {"cost": 5},
+			"Counting House": {"cost": 5},
+			"Expand": {"cost": 7},
+			"Forge": {"cost": 7},
+			"Goons": {"cost": 6, "requires": ["Victory Tokens"]},
+			"Grand Market": {"cost": 6},
+			"Hoard": {"cost": 6},
+			"King's Court": {"cost": 7},
+			"Loan": {"cost": 3},
+			"Mint": {"cost": 5},
+			"Monument": {"cost": 4, "requires": ["Victory Tokens"]},
+			"Mountebank": {"cost": 5},
+			"Peddler": {"cost": 8},
+			"Quarry": {"cost": 4},
+			"Rabble": {"cost": 5},
+			"Royal Seal": {"cost": 5},
+			"Talisman": {"cost": 4},
+			"Trade Route": {"cost": 3, "requires": ["Coin Tokens", "Trade Route Mat"]},
+			"Vault": {"cost": 5},
+			"Venture": {"cost": 5},
+			"Watchtower": {"cost": 3},
+			"Worker's Village": {"cost": 4}
+		},
+		"extraSupplyPiles":
+		{
+			"Platinum": {"cost": 9, "random": true},
+			"Colony": {"cost": 11, "random": true}
+		},
+		"extraMaterials":
+		{
+			"Coin Tokens": {},
+			"Trade Route Mat": {"requires": ["Coin Tokens"]},
+			"Victory Tokens": {"requires": ["Victory Token Mat"]},
+			"Victory Token Mat": {"requires": ["Victory Tokens"]}
+		}
+	}
+}

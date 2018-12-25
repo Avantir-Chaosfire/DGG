@@ -1,0 +1,87 @@
+{
+	"name": "Adventures",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Amulet": {"cost": 3},
+			"Artificer": {"cost": 5},
+			"Bridge Troll": {"cost": 5, "requires": ["-1 Coin Tokens"]},
+			"Caravan Guard": {"cost": 3},
+			"Coin of the Realm": {"cost": 2, "requires": ["Tavern Mat"]},
+			"Distant Lands": {"cost": 5, "requires": ["Tavern Mat"]},
+			"Dungeon": {"cost": 3},
+			"Duplicate": {"cost": 4, "requires": ["Tavern Mat"]},
+			"Gear": {"cost": 3},
+			"Giant": {"cost": 5, "requires": ["Journey Tokens"]},
+			"Guide": {"cost": 3, "requires": ["Tavern Mat"]},
+			"Haunted Woods": {"cost": 5},
+			"Hireling": {"cost": 6},
+			"Lost City": {"cost": 5},
+			"Magpie": {"cost": 4},
+			"Messenger": {"cost": 4},
+			"Miser": {"cost": 4, "requires": ["Tavern Mat"]},
+			"Page": {"cost": 2, "requires": ["Treasure Hunter", "Warrior", "Hero", "Champion"]},
+			"Peasant": {"cost": 2, "requires": ["Soldier", "Fugitive", "Disciple", "Teacher"]},
+			"Port": {"cost": 4},
+			"Ranger": {"cost": 4, "requires": ["Journey Tokens"]},
+			"Ratcatcher": {"cost": 2, "requires": ["Tavern Mat"]},
+			"Raze": {"cost": 2},
+			"Relic": {"cost": 5, "requires": ["-1 Card Tokens"]},
+			"Royal Carriage": {"cost": 5, "requires": ["Tavern Mat"]},
+			"Storyteller": {"cost": 5},
+			"Swamp Hag": {"cost": 5},
+			"Transmogrify": {"cost": 4, "requires": ["Tavern Mat"]},
+			"Treasure Trove": {"cost": 5},
+			"Wine Merchant": {"cost": 5, "requires": ["Tavern Mat"]}
+		},
+		"events":
+		{
+			"Alms": {"cost": 0},
+			"Ball": {"cost": 5, "requires": ["-1 Coin Tokens"]},
+			"Bonfire": {"cost": 3},
+			"Borrow": {"cost": 0, "requires": ["-1 Card Tokens"]},
+			"Expedition": {"cost": 3},
+			"Ferry": {"cost": 3, "requires": ["-2 Cost Tokens"]},
+			"Inheritance": {"cost": 7, "requires": ["Estate Tokens"]},
+			"Lost Arts": {"cost": 6, "requires": ["+1 Action Tokens"]},
+			"Mission": {"cost": 4},
+			"Pathfinding": {"cost": 8, "requires": ["+1 Card Tokens"]},
+			"Pilgrimage": {"cost": 4, "requires": ["Journey Tokens"]},
+			"Plan": {"cost": 3, "requires": ["Trashing Tokens"]},
+			"Quest": {"cost": 0},
+			"Raid": {"cost": 5, "requires": ["-1 Card Tokens"]},
+			"Save": {"cost": 1},
+			"Scouting Party": {"cost": 2},
+			"Seaway": {"cost": 5, "requires": ["+1 Buy Tokens"]},
+			"Trade": {"cost": 5},
+			"Training": {"cost": 6, "requires": ["+1 Coin Tokens"]},
+			"Travelling Fair": {"cost": 2}
+		},
+		"nonSupplyPiles":
+		{
+			"Treasure Hunter": {"cost": 3},
+			"Warrior": {"cost": 4},
+			"Hero": {"cost": 5},
+			"Champion": {"cost": 6},
+			"Soldier": {"cost": 3},
+			"Fugitive": {"cost": 4},
+			"Disciple": {"cost": 5},
+			"Teacher": {"cost": 6, "requires": ["Tavern Mat", "+1 Card Tokens", "+1 Action Tokens", "+1 Buy Tokens", "+1 Coin Tokens"]}
+		},
+		"extraMaterials":
+		{
+			"Tavern Mat": {},
+			"+1 Card Tokens": {},
+			"+1 Action Tokens": {},
+			"+1 Buy Tokens": {},
+			"+1 Coin Tokens": {},
+			"-2 Cost Tokens": {},
+			"Journey Tokens": {},
+			"Trashing Tokens": {},
+			"Estate Tokens": {},
+			"-1 Coin Tokens": {},
+			"-1 Card Tokens": {}
+		}
+	}
+}

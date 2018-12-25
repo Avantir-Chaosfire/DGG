@@ -1,0 +1,25 @@
+{
+	"name": "Alchemy",
+	"common":
+	{
+		"kingdomPiles":
+		{
+			"Alchemist": {"cost": 3, "potions": 1, "requires": ["Potion"]},
+			"Apothecary": {"cost": 2, "potions": 1, "requires": ["Potion"]},
+			"Apprentice": {"cost": 5},
+			"Familiar": {"cost": 3, "potions": 1, "requires": ["Potion"]},
+			"Golem": {"cost": 4, "potions": 1, "requires": ["Potion"]},
+			"Herbalist": {"cost": 2},
+			"Philosopher's Stone": {"cost": 3, "potions": 1, "requires": ["Potion"]},
+			"Possession": {"cost": 6, "potions": 1, "requires": ["Potion"]},
+			"Scrying Pool": {"cost": 2, "potions": 1, "requires": ["Potion"]},
+			"Transmute": {"cost": 0, "potions": 1, "requires": ["Potion"]},
+			"University": {"cost": 2, "potions": 1, "requires": ["Potion"]},
+			"Vineyard": {"cost": 0, "potions": 1, "requires": ["Potion"]}
+		},
+		"extraSupplyPiles":
+		{
+			"Potion": {"cost": 4}
+		}
+	}
+}
