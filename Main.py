@@ -65,7 +65,7 @@ def main():
             for pieceType in [Constants.EVENTS_ATTRIBUTE, Constants.LANDMARKS_ATTRIBUTE, Constants.PROJECTS_ATTRIBUTE]:
                 pieces += cardSets[cardSetName].getPieces(pieceType, edition)
             for piece in pieces:
-                piece.weight = weight if piece.weight == None else piece.weight
+                piece.weight = weight #if piece.weight == None else piece.weight
                 for i in range(weight):
                     randomizerDeck.append((piece, i))
 
