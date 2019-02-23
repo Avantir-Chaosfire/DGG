@@ -1,0 +1,27 @@
+{
+	"macros":
+	{
+		"all":
+		[
+			"base all editions",
+			"intrigue all editions",
+			"seaside",
+			"alchemy",
+			"prosperity",
+			"cornucopia",
+			"hinterlands",
+			"dark ages",
+			"guilds",
+			"adventures",
+			"empires",
+			"nocturne",
+			"renaissance",
+			"promotional",
+			"done"
+		],
+		"owned":
+		[
+			"done"
+		]
+	}
+}

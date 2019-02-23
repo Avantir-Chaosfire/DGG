@@ -1,8 +1,9 @@
-import random, os
+import random, os, json
 
 from Constants import *
 from CardSet import *
 from Game import *
+from InputParser import *
 
 #TODO
 #gui?
@@ -21,41 +22,20 @@ def main():
         for editionIndex in range(cardSet.editionCount):
             cardSetEditionNames[cardSetNameInput + ' ' + Constants.EDITION_COUNT_NAMES[editionIndex] + ' edition'] = (cardSetNameInput, editionIndex + 1)
 
+    with open(Constants.CONFIGURATION_FILE_NAME) as configFile:
+        data = json.load(configFile)
+
+    macros = data.get('macros', {})
+
     print('Dominion Game Generator')
     print('')
 
     while True:
-        setsToUse = {}
-
         print('Enter expansion names you want to use')
-
-        while True:
-            command = input().lower()
-
-            args = command.split(' ')
-            weight = 1
-
-            try:
-                weight = int(args[-1])
-                args = args[:-1]
-            except ValueError:
-                pass
-
-            command = ' '.join(args)
-            
-            if command == Constants.DONE_COMMAND:
-                break
-            elif command in cardSetEditionNames:
-                if command in setsToUse:
-                    print('Duplicate expansion')
-                    continue
-                else:
-                    (cardSetName, edition) = cardSetEditionNames[command]
-                    setsToUse[cardSetName] = (edition, weight)
-            else:
-                print('Unknown expansion')
-                continue
-
+        
+        inputParser = InputParser(macros, cardSetEditionNames)
+        setsToUse = inputParser.getSetsToUse()
+        
         randomizerDeck = []
         kingdomPileCount = 0
 

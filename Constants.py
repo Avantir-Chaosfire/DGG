@@ -1,4 +1,5 @@
 class Constants:
+    CONFIGURATION_FILE_NAME = 'config.json'
     SETS_DIRECTORY_NAME = 'sets'
     CONFIG_FILE_EXTENSION = '.json'
 
@@ -67,5 +68,6 @@ class Constants:
     MULTIPLE_SET_NAME_SEPARATOR = '/'
 
     DONE_COMMAND = 'done'
+    MACROS_COMMAND = 'macros'
 
     EDITION_COUNT_NAMES = ['first', 'second']
